@@ -1,28 +1,41 @@
-body{
-    font-family: Arial, Helvetica, sans-srif;
+
+body {
+    background-color: black;
+    color: #0F0;
+    font-family: 'Consolas', monospace;
 }
 
-header h1{
+header {
     text-align: center;
 }
 
-.todo-list{
-    border-top: 1px solid lightgrey;
+.messages {
+    margin-left: 1em;
     list-style: none;
-    padding: 0;
-    margin: 0 auto;
-    max-width: 300px;
 }
 
-.todo-list__item{
-    margin: .5em;
+.form {
+    display: flex;
 }
 
-.todo-list__item.completed{
-    color: gray;
-    text-decoration: line-through;
+input, label {
+    display: block;
 }
 
-p{
-    text-align: center;
+input {
+    outline: none;
+    border: none;
+    background-color: black;
+    color: #0F0;
+    padding: 1em .5em;
+    display: block;
+    font-size: 1.5em;
+    font-family: 'Consolas', monospace;
+    flex: 1;
+}
+
+label {
+    display: block;
+    padding: 1em .5em;
+    font-size: 1.5em;
 }
