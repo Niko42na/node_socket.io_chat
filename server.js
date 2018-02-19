@@ -1,19 +1,19 @@
 const WebSocket = require('ws');
 
-const server = new WebSocket.Server({ port: 3000});
+const server = new WebSocket.Server({ port: 3000 });
 
 server.on('connection', ws => {
   ws.on('message', message => {
-    if(message === 'exit'){
+    if (message === 'exit') {
       ws.close();
-    } else{
+    } else {
       server.clients.forEach(client => {
-        if(client.readyState === WebSocket.OPEN){
+        if (client.readyState === WebSocket.OPEN) {
           client.send(message);
         }
       });
     }
   });
 
-  ws.send('Welcome to NikoChat.');
+  ws.send('Добро пожаловать в CodeDojo.');
 });
