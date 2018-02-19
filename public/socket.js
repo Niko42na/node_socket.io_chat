@@ -19,8 +19,14 @@ function printMessage(value) {
 form.addEventListener('submit', event => {
   event.preventDefault();
 
-  socket.emit('chat', input.value);
-  input.value = '';
+  if(input.value === 'exit'){
+    socket.emit('disconnect');
+    input.value = '';
+    socket.close();
+  } else {
+    socket.emit('chat', input.value);
+    input.value = '';
+  }
 });
 
 socket.on('connect', () => setStatus('ONLINE'));
