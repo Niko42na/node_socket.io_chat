@@ -9,12 +9,12 @@ header {
     text-align: center;
 }
 
-.messages {
+#messages {
     margin-left: 1em;
     list-style: none;
 }
 
-.form {
+#form {
     display: flex;
 }
 
